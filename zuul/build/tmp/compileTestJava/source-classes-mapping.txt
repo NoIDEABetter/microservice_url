@@ -1,3 +1,0 @@
-com/zuul/gateway/GatewayTests.java
- com.zuul.gateway.GatewayTests
- com.zuul.gateway.GatewayTests$shortService
