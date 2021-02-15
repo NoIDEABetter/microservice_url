@@ -1,0 +1,6 @@
+com/zuul/gateway/filters/MSFilters.java
+ com.zuul.gateway.filters.MSFilters
+com/zuul/gateway/Application.java
+ com.zuul.gateway.Application
+com/zuul/gateway/security/config.java
+ com.zuul.gateway.security.config
