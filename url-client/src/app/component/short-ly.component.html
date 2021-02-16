@@ -1,0 +1,35 @@
+<mat-toolbar color="primary"> 
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Short-URL's</span>
+   
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <mat-drawer-container class="example-container" autosize>
+    <mat-card class="card">
+        
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Enter Your Long URL here!</mat-label>
+            <input type="url" matInput [formControl]="urlFormControl" placeholder="Ex. https://example.com/my/extra/long">
+          </mat-form-field>
+          <button mat-raised-button class="example-button" (click)="convertUrl()"> Convert </button>
+        </form>
+        
+    </mat-card>
+    <mat-card class="card" *ngIf="newUrl">
+      <mat-card-content class="content">
+        <h3 style="text-align: center; padding: 10px;">
+          Your short url is: <a href="http://localhost/shortUrl/{{ newUrl.shortUrl }}">http://localhost/shortUrl/{{ newUrl.shortUrl }}</a>
+        </h3>
+      </mat-card-content>
+    </mat-card>
+  </mat-drawer-container>
